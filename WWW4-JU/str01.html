@@ -1,0 +1,93 @@
+<html>
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+
+  
+  <title>Podstrona-1</title>
+</head>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 204, 204);" alink="#000099" link="#000099" vlink="#990099">
+
+<style>
+  body {
+    font-size: 20px; /*large/*
+  }
+</style>
+
+
+
+<div style="text-align: center;"><big><big><big>Style trzymania rakietki<br>
+
+</small></big></big></big><big><big><big><small><img style="width: 480px; height: 270px;" alt="trzymanie" src="trzymanie.gif"><small><small><small><br>
+
+</small></big></big></big><big><big><big><small><img style="width: 167px; height: 208px;" alt="obraz trzymania rakietki" src="obrazek1.jpeg"><small><small><small><br><br><br>
+
+
+
+W tenisie stołowym istniejš trzy główne style trzymania rakietki: kontynentalny, wschodni i penhold.<br><br>
+
+
+Chwyt kontynentalny: Trzymanie rakietki przypomina uchwyt młotka. Jest to uniwersalny chwyt, który sprawdza się zarówno przy uderzeniach forehandowych, jak i backhandowych. Umożliwia szybkie przejcie między uderzeniami, ale może być mniej precyzyjny przy backhandzie.<br><br>
+
+
+Chwyt wschodni: Rakietka jest trzymana jak rakieta tenisowa, z dłońmi skierowanymi w stronę forehandu. Pozwala to na większš kontrolę nad uderzeniami, szczególnie przy dynamicznej, ofensywnej grze.<br><br>
+
+
+Chwyt penhold (z ang. "długopis"): Rakietka jest trzymana jak długopis, co umożliwia bardzo precyzyjne uderzenia forehandowe i szybkie reakcje. Wadš tego chwytu jest trudniejszy backhand, który wymaga większej zręcznoci.<br><br>
+
+
+Każdy z tych stylów ma swoje zalety i wady, a wybór zależy od preferencji i stylu gry gracza.<br>
+<h2>Do Nowego Roku zostało:</h2>
+<div id="countdown"></div>
+
+
+<br>
+
+</small></big></big></big></div>
+
+<div style="text-align: center;"><a href="index.html">Strona gł&oacute;wna</a>
+</div>
+<div style="text-align: center;">
+
+
+<a href="str02.html">
+Style serwów</a><br>
+
+<a href="str03.html">
+Strategie gry</a><br>
+
+<a href="str04.html">
+Top 5 graczy obecnie na wiecie</a><br>
+
+<a href="str05.html">
+Ciekawostki</a></div>
+
+</div>
+
+<script>
+function updateCountdown() {
+  const now = new Date();
+  const nextYear = new Date(now.getFullYear() + 1, 0, 1);
+
+  const diff = nextYear - now;
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  document.getElementById("countdown").innerHTML =
+    days + " dni " +
+    hours + " godz. " +
+    minutes + " min " +
+    seconds + " sek";
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+</body>
+</html>

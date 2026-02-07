@@ -1,0 +1,136 @@
+<html>
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+
+  
+  <title>Tenis Stołowy</title>
+</head>
+<header>
+    
+    <div id="zegar"></div>
+</header>
+<style>
+        .linia {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        #zegar {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+
+
+<body style="background-color: green; color: black">
+
+<div style="text-align: center;"><big><big><big><b>Tenis Stołowy</b><br><br>
+
+</small></big></big></big><big><big><big><small>Tenis stołowy, znany również jako ping-pong, to sport rozgrywany na stole, w którym uczestniczš dwie lub cztery osoby. Celem gry jest odbijanie małej piłeczki rakietkš przez siatkę na połowę przeciwnika, pozwalajšc jej odbić się tylko raz. Gra wymaga dużej szybkoci, precyzji oraz koordynacji, a zasady sš proste do opanowania dla poczštkujšcych. Tenis stołowy jest jednš z najpopularniejszych gier na wiecie i jest dyscyplinš olimpijskš od 1988 roku.<br><br>
+
+
+
+
+
+<br>
+
+<style>
+  body {
+    font-size: 20px; /*large/*
+  }
+</style>
+<center>
+<table class="center" border="1">
+  <tr>
+    <th>Informacja</th>
+    <th>Opis</th>
+  </tr>
+  <tr>
+    <td>Nazwa dyscypliny</td>
+    <td>Tenis stołowy</td>
+  </tr>
+  <tr>
+    <td>Inna nazwa</td>
+    <td>Ping-pong</td>
+  </tr>
+  <tr>
+    <td>Miejsce powstania</td>
+    <td>Wielka Brytania</td>
+  </tr>
+  <tr>
+    <td>Liczba graczy</td>
+    <td>1 vs 1 lub 2 vs 2</td>
+  </tr>
+  <tr>
+    <td>Sprzęt</td>
+    <td>Rakietka, piłeczka, stół, siatka</td>
+  </tr>
+  <tr>
+    <td>Cel gry</td>
+    <td>Wygranie 3 lub 4 setów</td>
+  </tr>
+  <tr>
+    <td>Organizacja</td>
+    <td>ITTF</td>
+  </tr>
+</table>
+</center>
+
+
+<br><br><br>
+
+
+</small></big></big></big><big><big><big><small><img style="width: 167px; height: 208px;" alt="obrazek tenisa stołowego" src="obrazek.jpeg"><small><small><small><br>
+
+</small></big></big></big><big><big><big><small><img style="width: 167px; height: 208px;" alt="Bałwanek" src="tenis.gif"><small><small><small><br>
+
+</small></big></big></big><br>
+
+</div>
+
+
+</div>
+<div style="text-align: center;"><a href="str01.html">Style trzymania rakietki</a><br>
+
+<a href="str02.html">
+Style serwów</a><br>
+
+<a href="str03.html">
+Strategie gry</a><br>
+
+<a href="str04.html">
+Top 5 graczy obecnie na wiecie</a><br>
+
+<a href="str05.html">
+Ciekawostki</a></div>
+
+<script>
+function aktualizujZegar() {
+    const teraz = new Date();
+    let h = teraz.getHours();
+    let m = teraz.getMinutes();
+    let s = teraz.getSeconds();
+
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+
+    document.getElementById("zegar").innerHTML = h + ":" + m + ":" + s;
+}
+
+setInterval(aktualizujZegar, 1000);
+aktualizujZegar();
+</script>
+<br><br>
+<center><b>Stworzyl:Jędrzej Ukleja 8A </b></center>
+
+
+
+</body>
+</html>

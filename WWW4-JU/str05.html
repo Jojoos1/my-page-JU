@@ -1,0 +1,239 @@
+<html>
+<head>
+
+
+  
+  <meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+
+  
+  <title>Podstrona-5</title>
+</head>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 204, 255);" alink="#000099" link="#000099" vlink="#990099">
+
+<style>
+  body {
+    font-size: 20px; /*large/*
+  }
+</style>
+
+
+
+<div style="text-align: center;"><big><big><big>Ciekawostki<br>
+
+</small></big></big></big><big><big><big><small><img style="width: 167px; height: 208px;" alt="Bałwanek" src="obrazek5.jpeg"><small><small><small><br>
+
+</small></big></big></big><big><big><big><small><img style="width: 167px; height: 208px;" alt="Bałwanek" src="ciekawostki.gif"><small><small><small><br>
+
+
+<br>
+
+
+1. Tenis stołowy, znany również jako ping-pong, jest jednym z najszybszych sportów na wiecie. <br>
+2. Poczštkowo grał się na stole, a piłeczki były wykonane z korka i gumy. <br>
+3. W 1901 roku James Gibb wprowadził celuloidowe piłeczki, które stały się standardem. <br>
+4. Piłeczki pingpongowe sš wypełnione gazem pod odpowiednim cinieniem, co wpływa na ich właciwoci. <br>
+5. Najlepsi gracze potrafiš posłać piłeczkę z prędkociš ponad 150 km/h. <br>
+6. W 2000 roku piłeczki powiększone zostały o 2 mm, co o 15% spowolniło grę. <br>
+7. Mocno podkręcona piłeczka obraca się szybciej niż silnik na pełnych obrotach sportowego samochodu. <br>
+
+Te ciekawostki pokazujš, jak fascynujšcy i dynamiczny jest tenis stołowy, a także jak wiele istotnych informacji można znaleć w jego historii i zasadach.<br>
+<div id="ciekawostka"></div>
+<p>Następna ciekawostka za: <span id="timer">10</span> s</p>
+
+<br>
+
+
+</small></big></big></big></div>
+
+
+<div style="text-align: center;"><a href="index.html">Strona gł&oacute;wna</a>
+
+</div>
+<div style="text-align: center;">
+<div style="text-align: center;"><a href="str01.html">Style trzymania rakietki</a><br>
+
+<a href="str02.html">
+Style serwów</a><br>
+
+<a href="str03.html">
+Style gry</a><br>
+
+<a href="str04.html">
+Top 5 graczy obecnie na wiecie</a><br>
+
+<script>
+const ciekawostki = [
+  "Piłeczka do tenisa stołowego waży tylko 2,7 grama.",
+  "Tenis stołowy pochodzi z Wielkiej Brytanii.",
+  "Profesjonalni zawodnicy mogš uderzać piłkę z prędkociš ponad 100 km/h.",
+  "Mecz rozgrywa się do 11 punktów.",
+  "Najwięcej mistrzów wiata pochodzi z Chin.",
+  "Rakietka może mieć różne okładziny po obu stronach.",
+  "Stół do gry ma 274 cm długoci."
+];
+
+let czas = 10;
+
+function losujCiekawostke() {
+  const losowyIndex = Math.floor(Math.random() * ciekawostki.length);
+  document.getElementById("ciekawostka").innerText = ciekawostki[losowyIndex];
+}
+
+function odliczanie() {
+  document.getElementById("timer").innerText = czas;
+  czas--;
+
+  if (czas < 0) {
+    losujCiekawostke();
+    czas = 10;
+  }
+}
+
+// start
+losujCiekawostke();
+setInterval(odliczanie, 1000);
+</script>
+<section style="text-align:center; padding:20px; background:#f9f9f9; margin-top:20px;">
+  <h2>Tenis Stołowy - Gra Refleksu 2 Graczy ??</h2>
+
+  <!-- Instrukcja -->
+  <div style="max-width:600px; margin:auto; text-align:left; background:#fff; padding:15px; border-radius:10px; border:1px solid #ccc;">
+    <h3>Instrukcja:</h3>
+    <ul>
+      <li>Klikaj czerwonš piłkę zanim minie <strong>1 sekundę</strong>.</li>
+      <li>Każde kliknięcie piłki daje **1 punkt**.</li>
+      <li>Gracze grajš na zmianę, każdy ma 3 rundy (łšcznie 6 rund).</li>
+      <li>Po rozegraniu wszystkich rund sumowane sš punkty i wyłaniany jest zwycięzca.</li>
+      <li>Kliknij <strong>Start</strong>, aby rozpoczšć grę.</li>
+    </ul>
+  </div>
+
+  <button id="startBtn" style="margin:20px; padding:10px 20px; font-size:18px;">Start</button>
+
+  <div id="gameArea" style="width:400px; height:300px; background:#e0f7fa; border:2px solid #00796b; margin:30px auto; position:relative; display:none;">
+    <div id="ball" style="width:30px; height:30px; background:red; border-radius:50%; position:absolute; top:50px; left:50px; cursor:pointer;"></div>
+  </div>
+
+  <div id="scoreBoard" style="font-size:20px; margin:10px; display:none;">
+    Gracz: <span id="currentPlayer">A</span> | Punkty w tej rundzie: <span id="hits">0</span><br>
+    Wynik A: <span id="scoreA">0</span> | Wynik B: <span id="scoreB">0</span><br>
+    Rundy A: <span id="roundsA">0</span>/3 | Rundy B: <span id="roundsB">0</span>/3
+  </div>
+
+  <div id="winnerMessage" style="font-size:24px; margin:20px; display:none;"></div>
+  <button id="restartBtn" style="display:none; padding:10px 20px; font-size:18px;" onclick="restartGame()">Zagraj jeszcze raz</button>
+</section>
+
+<script>
+  const ball = document.getElementById('ball');
+  const gameArea = document.getElementById('gameArea');
+  const startBtn = document.getElementById('startBtn');
+  const scoreBoard = document.getElementById('scoreBoard');
+  const currentPlayerElem = document.getElementById('currentPlayer');
+  const hitsElem = document.getElementById('hits');
+  const scoreAElem = document.getElementById('scoreA');
+  const scoreBElem = document.getElementById('scoreB');
+  const roundsAElem = document.getElementById('roundsA');
+  const roundsBElem = document.getElementById('roundsB');
+  const winnerMessage = document.getElementById('winnerMessage');
+  const restartBtn = document.getElementById('restartBtn');
+
+  let countdown;
+  let hits = 0;
+  const clickTime = 1000; // 1 sekunda
+  let currentPlayer = 'A';
+  let scores = {A:0, B:0};
+  let roundsPlayed = {A:0, B:0};
+  const maxRounds = 3;
+
+  function moveBall() {
+    const maxX = gameArea.clientWidth - ball.clientWidth;
+    const maxY = gameArea.clientHeight - ball.clientHeight;
+    ball.style.left = Math.floor(Math.random()*maxX) + 'px';
+    ball.style.top = Math.floor(Math.random()*maxY) + 'px';
+  }
+
+  function startRound() {
+    hits = 0;
+    hitsElem.innerText = hits;
+    currentPlayerElem.innerText = currentPlayer;
+    moveBall();
+    countdown = setTimeout(roundOver, clickTime);
+  }
+
+  function roundOver() {
+    clearTimeout(countdown);
+
+    // Dodaj punkty z tej rundy
+    scores[currentPlayer] += hits;
+
+    // Aktualizacja tabeli wyników i rund
+    scoreAElem.innerText = scores['A'];
+    scoreBElem.innerText = scores['B'];
+    roundsPlayed[currentPlayer]++;
+    roundsAElem.innerText = roundsPlayed['A'];
+    roundsBElem.innerText = roundsPlayed['B'];
+
+    // Sprawdzenie czy wszyscy gracze skończyli 3 rundy
+    if(roundsPlayed['A'] >= maxRounds && roundsPlayed['B'] >= maxRounds){
+      endGame();
+    } else {
+      // Zmieniamy gracza na naprzemiennie
+      currentPlayer = currentPlayer === 'A' ? 'B' : 'A';
+      startRound();
+    }
+  }
+
+  ball.onclick = () => {
+    clearTimeout(countdown);
+    hits++;
+    hitsElem.innerText = hits;
+    moveBall();
+    countdown = setTimeout(roundOver, clickTime);
+  }
+
+  function endGame() {
+    gameArea.style.display = 'none';
+    scoreBoard.style.display = 'none';
+    winnerMessage.style.display = 'block';
+    restartBtn.style.display = 'inline-block';
+
+    if(scores['A'] > scores['B']){
+      winnerMessage.innerText = `Gratulacje Graczu A! Wygrałe! ??`;
+    } else if(scores['B'] > scores['A']){
+      winnerMessage.innerText = `Gratulacje Graczu B! Wygrałe! ??`;
+    } else {
+      winnerMessage.innerText = `Remis! Obaj gracze zdobyli tyle samo punktów.`;
+    }
+  }
+
+  function restartGame() {
+    scores = {A:0, B:0};
+    roundsPlayed = {A:0, B:0};
+    currentPlayer = 'A';
+    hits = 0;
+
+    scoreAElem.innerText = '0';
+    scoreBElem.innerText = '0';
+    roundsAElem.innerText = '0';
+    roundsBElem.innerText = '0';
+    hitsElem.innerText = '0';
+
+    winnerMessage.style.display = 'none';
+    restartBtn.style.display = 'none';
+    gameArea.style.display = 'block';
+    scoreBoard.style.display = 'block';
+
+    startRound();
+  }
+
+  startBtn.onclick = () => {
+    startBtn.style.display = 'none';
+    gameArea.style.display = 'block';
+    scoreBoard.style.display = 'block';
+    startRound();
+  }
+</script>
+ </body>
+</html>
